@@ -7,14 +7,14 @@ function Header({ bgColor, textColor, text }) {
     return (
         <header style={headerInStyles}>
             <div className='container'>
-                <h2>{text}</h2>
+                <h1>{text}</h1>
             </div>
         </header>
     );
 }
 
 Header.defaultProps = {
-    text: 'Feedback👯🔢',
+    text: 'Movie Review👯🔢',
     bgColor: '#B10DC9',
     textColor: '#111111',
 };

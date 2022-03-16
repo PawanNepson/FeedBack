@@ -7,7 +7,7 @@ export const FeedbackData = [
     {
         id: 2,
         rating: 9,
-        text: 'Is definitely not a "feel-good" movie🍿🎥📽️',
+        text: 'Is definitely  a "feel-good" movie🍿🎥📽️',
     },
     {
         id: 3,
