@@ -1,5 +1,6 @@
 
 import PropTypes from 'prop-types';
+import { MdReviews } from "react-icons/md";
 
 function Header({ bgColor, textColor, text }) {
     const headerInStyles = { backgroundColor: bgColor, color: textColor };
@@ -7,14 +8,14 @@ function Header({ bgColor, textColor, text }) {
     return (
         <header style={headerInStyles}>
             <div className='container'>
-                <h1>{text}</h1>
+                <h1><MdReviews style={{ color: "red" }} />{text}</h1>
             </div>
         </header>
     );
 }
 
 Header.defaultProps = {
-    text: 'Movie Review👯🔢',
+    text: 'Movie Review',
     bgColor: '#B10DC9',
     textColor: '#111111',
 };

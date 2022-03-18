@@ -1,8 +1,9 @@
 import FeedbackItem from './FeedbackItem';
 
 function FeedbackList({ feedback, handleDelete }) {
+
     if (!feedback || feedback.length === 0) {
-        return <h2>No feedback found!</h2>;
+        return <h1 style={{ color: "red", fontFamily: "cursive" }}>Not a single review Found🔎🔎🔎 </h1>;
     }
 
     return (
