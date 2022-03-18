@@ -48,3 +48,12 @@ header {
   border: 1px #eee solid;
   transition: 0.3s;
 }
+
+.close {
+  cursor: pointer;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
