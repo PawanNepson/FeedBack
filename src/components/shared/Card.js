@@ -4,7 +4,7 @@ function Card({ children, reverse }) {
   return (
     <div
       className='card'
-      style={{ backgroundColor: reverse ? 'rgba(0,0,0,0.4)' : '#fff' }}
+      style={{ backgroundColor: reverse ? 'rgba(0,0,100,0.4)' : '#ADEFD1FF' }}
     >
       {children}
     </div>

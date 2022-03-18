@@ -14,5 +14,15 @@ export const FeedbackData = [
         rating: 4,
         text: 'movie started with potential but quickly gets lost 💔💔💔.',
     },
+    {
+        id: 4,
+        rating: 7,
+        text: 'This movie is best in recent days.⚒️⚒️⚒️',
+    },
+    {
+        id: 5,
+        rating: 10,
+        text: 'This is the movie you have been waiting for 👍🏻👍🏻👍🏻💯💯💯',
+    },
 ];
 
