@@ -1,13 +1,12 @@
 import React from 'react';
 import Card from './shared/Card';
-import { FaTimesCircle } from 'react-icons/fa';
-
+import { MdDelete } from "react-icons/md";
 function FeedbackItem({ item, handleDelete }) {
     return (
         <Card>
             <div className='num-display'>{item.rating}</div>
             <div className='text-display'>{item.text}</div>
-            <FaTimesCircle onClick={() => handleDelete(item.id)} className='close ' color='purple' size='2rem' />
+            <MdDelete onClick={() => handleDelete(item.id)} className='close ' color='red' size='2rem' />
 
 
         </Card>
