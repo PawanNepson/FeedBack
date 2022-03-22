@@ -6,7 +6,7 @@ function FeedbackForm() {
     return (
         <Card>
             <form>
-                <h2>Please share your review .</h2>
+                <h2>Please share your review✍🏻 .</h2>
                 <div className='input-group'>
                     <input type='text' />
                     <Button> Submit </Button>
