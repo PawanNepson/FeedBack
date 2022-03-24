@@ -1,6 +1,8 @@
 
+import { hover } from '@testing-library/user-event/dist/hover';
 import PropTypes from 'prop-types';
 import { MdReviews } from "react-icons/md";
+
 
 function Header({ bgColor, textColor, text }) {
     const headerInStyles = { backgroundColor: bgColor, color: textColor };

@@ -1,6 +1,8 @@
 function FeedbackStats({ feedback }) {
     let average =
         feedback.reduce((acc, cur) => {
+            console.log(acc)//first ma yeso value 0
+            console.log(cur)//yesko value chai object
             return acc + cur.rating;
         }, 0) / feedback.length;
 
