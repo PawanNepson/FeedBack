@@ -1,45 +1,56 @@
-
 import { useState } from 'react';
 import Button from './shared/Button';
 import Card from './shared/Card';
-import { MdOutlineRateReview } from "react-icons/md";
+import RatingSelect from './RatingSelect';
 
-function FeedbackForm() {
+function FeedbackForm({ handleAdd }) {
     const [text, setText] = useState('');
-
+    const [message, setMessage] = useState('');
     const [btnDisabled, setBtnDisabled] = useState(true);
-    console.log(btnDisabled);
+    const [rating, setRating] = useState('');
 
     const handleChangeText = (e) => {
-        console.log('I am from handler');
+        setText(e.target.value);
+
         if (text === '') {
-            console.log('I am from 1st if');
             setBtnDisabled(true);
-        }
-
-        console.log(text);
-
-        if (text !== '' && text.trim().length <= 10) {
+            setMessage(null);
+        } else if (text !== '' && text.trim().length <= 10) {
             setBtnDisabled(true);
+            setMessage('Your text is less than 10 character!');
         } else {
-            console.log('I am from last if block');
             setBtnDisabled(false);
+            setMessage(null);
+        }
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (text.trim().length > 10) {
+            const newFeedback = { rating, text };
+            handleAdd(newFeedback);
+
+            setText('');
         }
     };
 
     return (
         <Card>
-            <form>
-                <h2>Submit your review here. <MdOutlineRateReview style={{ color: "red" }} /> </h2>
+            <form onSubmit={handleSubmit}>
+                <h2>Please type your feedback below.</h2>
+                <RatingSelect select={(select) => setRating(select)} />
                 <div className='input-group'>
                     <input
                         type='text'
                         onChange={handleChangeText}
                         placeholder='Write your review'
                     />
-                    <Button isDisabled={btnDisabled}> Submit </Button>
+                    <Button isDisabled={btnDisabled} type='submit'>
+                        {' '}
+                        Send{' '}
+                    </Button>
                 </div>
-                <h1>{text}</h1>
+                {message && <div className='message'>{message}</div>}
             </form>
         </Card>
     );
