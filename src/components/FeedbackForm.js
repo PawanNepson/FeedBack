@@ -31,9 +31,10 @@ function FeedbackForm({ handleAdd }) {
             const newFeedback = { rating, text };
             console.log(newFeedback)
             handleAdd(newFeedback);
+            setText("    ");
 
-            setText(" ");
         }
+
     };
 
     return (
@@ -46,6 +47,7 @@ function FeedbackForm({ handleAdd }) {
                         type='text'
                         onChange={handleChangeText}
                         placeholder='Write your review'
+                        value={text}
                     />
                     <Button isDisabled={btnDisabled} type='submit'>
                         {' '}
