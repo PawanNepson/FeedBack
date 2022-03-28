@@ -5,7 +5,7 @@ function Card({ children, reverse }) {
     <div
       className='card'
       style={{
-        backgroundColor: reverse ? '#00ABE1' : '#161F6D',
+        backgroundColor: reverse ? '#00ABE1' : '#B10DC9',
         color: reverse ? '#fff' : 'white',
       }}
     >

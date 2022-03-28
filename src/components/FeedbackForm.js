@@ -39,7 +39,7 @@ function FeedbackForm({ handleAdd }) {
     return (
         <Card>
             <form onSubmit={handleSubmit}>
-                <h2>Please type your feedback below.</h2>
+                <h2 >What you guys feel about this movie🎥 </h2>
                 <RatingSelect select={(select) => setRating(select)} />
                 <div className='input-group'>
                     <input

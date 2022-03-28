@@ -5,11 +5,37 @@
   margin: 0;
   padding: 0;
 }
+h1:hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
 
+  border-radius: 50px;
+  /* moz-transition: all .4s ease-in-out; */
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+h2:hover{
+  
+  color:gold;
+  
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  
+}
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  background-color: #202142;
+  background-color: gold;
   color: #fff;
   line-height: 1.6;
 }
@@ -150,14 +176,14 @@ input:focus {
   color: #fff;
   border: 0;
   border-radius: 8px;
-  color: #fff;
+  
   width: 100px;
   height: 40px;
   cursor: pointer;
 }
 
 .btn-primary {
-  background-color: #202142;
+  background-color: #4CAF50;
 }
 
 .btn-secondary {
@@ -167,6 +193,7 @@ input:focus {
 .btn:hover {
   transform: scale(0.98);
   opacity: 0.9;
+  
 }
 
 .btn:disabled {
@@ -183,7 +210,7 @@ input:focus {
 .message {
   padding-top: 10px;
   text-align: center;
-  color: rebeccapurple;
+  color: rgb(208, 238, 238);
 }
 
 .about-link {
