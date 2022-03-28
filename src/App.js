@@ -11,7 +11,7 @@ function App() {
   const [feedback, setFeedback] = React.useState(FeedbackData);
 
   const deleteFeedback = (id) => {
-    if (window.confirm('Are you ✂️✂️✂️?')) {
+    if (window.confirm('Are you sure ✂️✂️✂️?')) {
       setFeedback(feedback.filter((item) => item.id !== id));
     }
   };
@@ -22,14 +22,14 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <Header />
       <div className='container'>
         <FeedbackForm handleAdd={addFeedback} />
         <FeedbackStats feedback={feedback} />
         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
       </div>
-    </>
+    </div>
   );
 }
 

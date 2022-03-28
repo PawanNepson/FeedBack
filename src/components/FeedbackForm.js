@@ -4,8 +4,9 @@ import Card from './shared/Card';
 import RatingSelect from './RatingSelect';
 
 function FeedbackForm({ handleAdd }) {
+
     const [text, setText] = useState('');
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState('Your review is precious✍🏻');
     const [btnDisabled, setBtnDisabled] = useState(true);
     const [rating, setRating] = useState('');
 
@@ -14,10 +15,10 @@ function FeedbackForm({ handleAdd }) {
 
         if (text === '') {
             setBtnDisabled(true);
-            setMessage(null);
-        } else if (text !== '' && text.trim().length <= 10) {
+            setMessage("Share Your review with us!!!");
+        } else if (text !== '' && text.trim().length <= 15) {
             setBtnDisabled(true);
-            setMessage('Your text is less than 10 character!');
+            setMessage('Your text should be at least 15 character !');
         } else {
             setBtnDisabled(false);
             setMessage(null);
@@ -26,11 +27,12 @@ function FeedbackForm({ handleAdd }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (text.trim().length > 10) {
+        if (text.trim().length > 15) {
             const newFeedback = { rating, text };
+            console.log(newFeedback)
             handleAdd(newFeedback);
 
-            setText('');
+            setText(" ");
         }
     };
 
@@ -47,7 +49,7 @@ function FeedbackForm({ handleAdd }) {
                     />
                     <Button isDisabled={btnDisabled} type='submit'>
                         {' '}
-                        Send{' '}
+                        Sumbit{' '}
                     </Button>
                 </div>
                 {message && <div className='message'>{message}</div>}

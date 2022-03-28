@@ -5,11 +5,12 @@ function Card({ children, reverse }) {
     <div
       className='card'
       style={{
-        backgroundColor: reverse ? 'rgba(0,0,0,0.4)' : '#fff',
-        color: reverse ? '#fff' : '#000',
+        backgroundColor: reverse ? '#00ABE1' : '#161F6D',
+        color: reverse ? '#fff' : 'white',
       }}
     >
       {children}
+
     </div>
   );
 }
