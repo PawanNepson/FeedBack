@@ -17,7 +17,7 @@ function Header({ bgColor, textColor, text }) {
 }
 
 Header.defaultProps = {
-    text: 'Movie Review',
+    text: 'Movie Review 🎥',
     bgColor: '#B10DC9',
     textColor: '#111111',
 };
